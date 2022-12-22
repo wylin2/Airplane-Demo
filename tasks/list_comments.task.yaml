@@ -1,0 +1,9 @@
+# Full reference: https://docs.airplane.dev/tasks/task-definition
+
+slug: demo_list_comments
+name: "[DEMO] List Comments"
+description: List all team comments
+
+sql:
+  resource: "railwaydb"
+  entrypoint: list_comments.sql

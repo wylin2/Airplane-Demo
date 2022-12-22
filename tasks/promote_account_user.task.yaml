@@ -1,0 +1,14 @@
+# Full reference: https://docs.airplane.dev/tasks/task-definition
+
+slug: demo_promote_account_user
+name: "[DEMO] Promote Account User"
+description: Promote a user to the next level
+parameters:
+  - name: User ID
+    slug: id
+    type: integer
+sql:
+  resource: "demo_db"
+  entrypoint: promote_account_user.sql
+  queryArgs:
+    id: "{{params.id}}"

@@ -1,0 +1,20 @@
+# Full reference: https://docs.airplane.dev/tasks/task-definition
+
+slug: demo_update_comment
+name: "[DEMO] Update Comment"
+description: Update a team comment
+
+parameters:
+  - slug: id
+    name: Account ID
+    type: integer
+  - slug: new_status
+    name: Name
+    type: shorttext
+
+sql:
+  resource: "railwaydb"
+  entrypoint: update_comment.sql
+  queryArgs:
+    id: "{{params.id}}"
+    new_status: "{{params.new_status}}"
